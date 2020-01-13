@@ -1,0 +1,44 @@
+/**
+ * Copyright (C), 2015-2020, XXX有限公司
+ * FileName: ArrayPairSum
+ * Author:   王小手
+ * Date:     2020/1/8 17:41
+ * Description: 数组拆分 I
+ * History:
+ * <author>          <time>          <version>          <desc>
+ * 作者姓名           修改时间           版本号              描述
+ */
+package com.leetcode;
+
+import java.util.Arrays;
+
+/**
+ * 〈一句话功能简述〉<br> 
+ * 〈数组拆分 I〉
+ *给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), ..., (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。
+ *
+ * 示例 1:
+ *
+ * 输入: [1,4,3,2]
+ *
+ * 输出: 4
+ * 解释: n 等于 2, 最大总和为 4 = min(1, 2) + min(3, 4).
+ *
+ * @author
+ * @create 2020/1/8
+ * @since 1.0.0
+ */
+public class ArrayPairSum {
+    public static void main(String[] args) {
+
+    }
+
+    private static int arrayPairSum(int[] nums){
+        Arrays.sort(nums);
+        int sum=0;
+        for (int i=0;i<nums.length;i+=2){
+            sum+=nums[i];
+        }
+        return sum;
+    }
+}
